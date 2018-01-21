@@ -18,8 +18,8 @@ Descripción del Problema
 			Tenga en cuenta que el arquero sí podría moverse, pero no fuera del arco (vea el punto 4).
 		4. Cuando la pelota es disparada fuera del arco y el arquero no se sale del arco, se gana un punto (+1)
 		5. Los disparos del balón son realizados enseguida uno después del otro. Esto quiere decir que el arquero,
-			luego de un disparo, no se posiciona al centro del arco sino que trata de atajar el siguiente disparo
-			desde el lugar en el que quedó luego del primer disparo.
+			luego de un disparo, no se posiciona al centro del arco sino que trata de atajar el siguiente
+			disparo desde el lugar en el que quedó luego del primer disparo.
 
 			| | | | |ð| | | | |
 			| | | | | | | | | |
