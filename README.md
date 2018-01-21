@@ -20,21 +20,14 @@ Descripción del Problema
     
     2. Cuando el arquero no ataja, se pierden dos puntos (−2)
     
-    3. Cuando la pelota es disparada fuera del arco y el arquero se mueve a ese lugar, se
+    3. Cuando la pelota es disparada fuera del arco y el arquero se mueve a ese lugar, se pierde un punto (−1).
+      	
+        Tenga en cuenta que el arquero sí podría moverse, pero no fuera del arco (vea el punto 4).
     
-      pierde un punto (−1). Tenga en cuenta que el arquero sí podría moverse, pero no
-      
-      fuera del arco (vea el punto 4)
+    4. Cuando la pelota es disparada fuera del arco y el arquero no se sale del arco, se gana un punto (+1)
     
-    4. Cuando la pelota es disparada fuera del arco y el arquero no se sale del arco, se
-      
-      gana un punto (+1)
-    
-    5. Los disparos del balón son realizados enseguida uno después del otro. Esto quiere
-      
-      decir que el arquero, luego de un disparo, no se posiciona al centro del arco sino que
-      
-      trata de atajar el siguiente disparo desde el lugar en el que quedó luego del primer
+    5. Los disparos del balón son realizados enseguida uno después del otro. Esto quiere decir que el arquero, luego de un disparo, no     
+        se posiciona al centro del arco sino que trata de atajar el siguiente disparo desde el lugar en el que quedó luego del primer
       
       disparo.
 
