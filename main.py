@@ -32,6 +32,7 @@ lr = .85
 y = .99
 
 i = 0
+iterations = 0
 
 while True:
     for event in pg.event.get():
@@ -76,9 +77,10 @@ while True:
     elif reward == -1:  # missed
         missed += reward  # add the reward to the missed count
 
-    pg.draw.rect(window, BLACK, (20, 10, 450, 40))
-    text = font.render('Ganados: ' + str(score) + '  |  Perdidos: ' + str(missed) + '  |  Total: ' + str(score+missed), True, WHITE)  # update the score on the screen
+    #pg.draw.rect(window, BLACK, (20, 10, 700, 40))
+    text = font.render('Ganados: ' + str(score) + '  |  Perdidos: ' + str(missed) + '  |  Total: ' + str(score+missed) + '  |  iteraciones: ' + str(iterations), True, WHITE)  # update the score on the screen
     window.blit(text, (40, 20))  # render score
+    iterations+=1
 
     pg.display.update()  # update display
     fpsClock.tick(FPS)
