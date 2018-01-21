@@ -1,5 +1,5 @@
 #Videojuego La Final con Q-Learning
-#Código fuete originalmente modificado para el propósito de este trabajo: https://github.com/hasanIqbalAnik/q-learning-python-example
+#Código fuente originalmente modificado para el propósito de este trabajo: https://github.com/hasanIqbalAnik/q-learning-python-example
 
 
 Descripción del Problema
