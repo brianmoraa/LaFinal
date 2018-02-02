@@ -4,12 +4,10 @@ from initializers import *
 from classes import *
 
 '''
-a new state simply means the changed position of the
-rectangle and the circle. the rectangle would move according
-to the optimal action, the circle falls freely.
+un nuevo estado simplemente significa la posición cambiada 
+del rectángulo y el círculo. el rectángulo se movería según 
+la acción óptima, el círculo cae libremente.
 '''
-
-
 def new_state_after_action(s, act):
     rct = None
 
@@ -33,12 +31,9 @@ def new_state_after_action(s, act):
 
     return State(rct, newCircle)
 
-
 '''
-almost similar to a new state, separating because of some easiness
+casi similar a un nuevo estado, separándose por cierta facilidad
 '''
-
-
 def new_rect_after_action(rect, act):
     if act == 2:  # 0 == left, 1 == right
         if rect.right + rect.width > windowWidth:
@@ -55,41 +50,34 @@ def new_rect_after_action(rect, act):
     else:  # action if to stay
         return rect
 
-
 '''
-defines where the starting x position of the circle
-should be while falling.
+define dónde debe estar la posición x inicial del círculo al caer.
 '''
-
-
 def circle_falling(crclradius):
     multiplier = (random.randint(0, 8)*100)+50  # make more channel by making it a floating point number
     return multiplier
 
 '''
-calculate the score based on the relative position of the
-circle and the rectangle.
+calcule el puntaje basado en la posición relativa del círculo y el rectángulo.
 '''
-
-
 def calculate_score(rect, circle):
     #print ('RL: ' + str(rect.left) + ' RL: ' + str(rect.right) +  ' CX: ' + str(circle.circleX))
     if (rect.left == 200) or (rect.left == 300) or (rect.left == 400) or (rect.left == 500) or (rect.left == 600):
         if rect.left <= circle.circleX <= rect.right:  # if the circle'x x position is between the rectangles left and right
-            print('Caught!')
+            #print('Caught!')
             return 2
         elif circle.circleX<200 or circle.circleX>700:
-            print('No moved!')
+            #print('No moved!')
             return 1
         else:
-            print('Gool!')
+            #print('Gool!')
             return -2
     else:
         if circle.circleX < 200 or circle.circleX > 700:
-            print('Moved!')
+            #print('Moved!')
             return -1
         else:
-            print('Gool!')
+            #print('Gool!')
             return -2
 
 
@@ -108,13 +96,12 @@ def calculate_score(rect, circle):
         else:
             return -1
 
-
 '''
-numpy array can't work with custom objects as indices.
-that's why we must create an integer representation of the states
-the position of the rectangle and circle combined should give us a unique
-identifier. we are storing the value in another dictionary which would hold the unique
-indices.
+numpy array no puede funcionar con objetos personalizados como índices.
+es por eso que debemos crear una representación entera de los estados 
+donde la posición del rectángulo y el círculo combinados deberían darnos 
+un identificador único. estamos almacenando el valor en otro diccionario 
+que contendría los índices únicos.
 '''
 
 
@@ -123,18 +110,15 @@ def state_to_number(s):
     c = s.circle.circleY
 
     if isinstance(c, float):
-        #print('float')
         a,b=str(c).split('.')
         c = str(a)
-    #else:
-        #print ('int')
     n = int(str(r) + str(c) + str(s.circle.circleX))
 
     if n in QIDic:
         return QIDic[n]
     else:
         if len(QIDic):
-            maximum = max(QIDic, key=QIDic.get)  # Just use 'min' instead of 'max' for minimum.
+            maximum = max(QIDic, key=QIDic.get)  # Simplemente use 'min' en lugar de 'max' para mínimo.
             QIDic[n] = QIDic[maximum] + 1
         else:
             QIDic[n] = 1

@@ -1,7 +1,7 @@
 class Circle:
     '''
-    There is no Circle object in Pygame. This class would offset that.
-    It's much easier to work with it than specifying the x and y coordinates everytiime
+    Aquí no hay ningún objeto Circle en Pygame. Esta clase compensaría eso.
+     Es mucho más fácil trabajar con él que especificar las coordenadas xey cada vez
     :var circleX
     :var circleY
     '''
@@ -10,12 +10,12 @@ class Circle:
         self.circleX = circleX
         self.circleY = circleY
 
-
 class State:
     '''
-    this class would hold the game snapshot, used by the
-    q learner to index it's table, as well as reward function
-    to determine the reward of that particular state.
+    esta clase contendría la instantánea del juego,
+    utilizada por el alumno q para indexar su tabla,
+    así como la función de recompensa para determinar la
+    recompensa de ese estado en particular.
 
     :var rectPosition
     :var circlePosition
@@ -24,5 +24,3 @@ class State:
     def __init__(self, rect, circle):
         self.rect = rect
         self.circle = circle
-
-
