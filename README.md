@@ -29,7 +29,6 @@ Descripción del Problema
 
 Desarrolladores
 
-  Daniel Gomez Jaramillo
   Brian Mora Aguirre
   Mauricio Pesantez Guzñay
   David Valladarez Muñoz
